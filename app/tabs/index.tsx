@@ -1,23 +1,15 @@
 import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text } from "react-native";
+import tw from 'tailwind-react-native-classnames';
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <Text>Aora</Text>
+        <View style={tw`flex-1 items-center justify-center bg-white`}>
+            <Text style={tw`text-3xl`}>Aora</Text>
             <Text>Hello World</Text>
-            <StatusBar style="auto" />   
+            <StatusBar style="auto" />
             <Link href="/tabs/profile" style={{ color: 'blue' }}>Go to Profile</Link>
-        </View >
+        </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center"
-    }
-})
